@@ -1,0 +1,192 @@
+.root-container {
+    -fx-font-family: "Segoe UI", "SF Pro Display", -apple-system, sans-serif;
+    -fx-padding: 20;
+    -fx-spacing: 16;
+    -fx-background-color: #fafafa;
+}
+
+.main-grid {
+    -fx-hgap: 16;
+    -fx-vgap: 16;
+}
+
+.section-container {
+    -fx-spacing: 8;
+}
+
+.text-area {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 13px;
+    -fx-padding: 12;
+    -fx-font-family: "SF Mono", "Consolas", monospace;
+}
+
+.text-area:focused {
+    -fx-border-color: #007AFF;
+    -fx-border-width: 2;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-text-fill: #1d1d1f;
+    -fx-letter-spacing: 0.5px;
+}
+
+.button {
+    -fx-padding: 14 32 14 32;
+    -fx-background-radius: 4;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #007AFF;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-letter-spacing: 1px;
+}
+
+.button:hover {
+    -fx-background-color: #0056CC;
+}
+
+.button:pressed {
+    -fx-background-color: #004499;
+}
+
+.calculate-button-container {
+    -fx-padding: 8 0 4 0;
+    -fx-alignment: center;
+}
+
+#statusLabel {
+    -fx-text-fill: #8e8e93;
+    -fx-font-size: 11px;
+    -fx-alignment: center;
+    -fx-padding: 8;
+    -fx-background-color: transparent;
+}
+
+.menu-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 0 8 0;
+}
+
+.menu {
+    -fx-padding: 8 16 8 16;
+    -fx-background-color: transparent;
+}
+
+.menu:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 4;
+}
+
+.menu:showing {
+    -fx-background-color: #007AFF;
+    -fx-text-fill: white;
+}
+
+.menu-item {
+    -fx-padding: 10 20 10 20;
+    -fx-background-color: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.menu-item:focused {
+    -fx-background-color: #007AFF;
+    -fx-text-fill: white;
+}
+
+.section-container > .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1d1d1f;
+    -fx-padding: 0 0 6 0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.text-area:disabled {
+    -fx-background-color: #f8f8f8;
+    -fx-text-fill: #1d1d1f;
+    -fx-opacity: 1;
+}
+
+.text-area:disabled#resultTextArea {
+    -fx-background-color: #f8f8f8;
+    -fx-text-fill: #1d1d1f;
+    -fx-font-weight: 500;
+}
+
+.text-area:disabled#reversePolishNotationTextArea {
+    -fx-background-color: #f8f8f8;
+    -fx-text-fill: #1d1d1f;
+    -fx-font-family: "SF Mono", "Consolas", monospace;
+    -fx-font-weight: 500;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #c0c0c0;
+    -fx-background-radius: 2;
+}
+
+.text-area .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #a0a0a0;
+}
+
+.text-area, .button, .label, .menu-bar {
+    -fx-effect: null;
+}
+
+.button:disabled {
+    -fx-background-color: #c0c0c0;
+    -fx-text-fill: #8e8e93;
+}
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.success {
+    -fx-text-fill: #34C759;
+}
+
+.error {
+    -fx-text-fill: #FF3B30;
+}
+
+.warning {
+    -fx-text-fill: #FF9500;
+}
+
+.mono {
+    -fx-font-family: "SF Mono", "Consolas", monospace;
+}
+
+.separator {
+    -fx-background-color: #e0e0e0;
+}
