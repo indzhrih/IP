@@ -1,15 +1,20 @@
-#IDEA
+# IDEA
 .idea/
 
-#Java build files
+# Java build files
 out/
 *.iml
-*.txt
 *.class
 **/*.class
 
-#Gradle build files
+# Gradle build files
 .gradle/
 build/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.bat
+
+# Other data
+*.txt
 *.json
 **/*.json
