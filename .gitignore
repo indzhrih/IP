@@ -18,3 +18,4 @@ build/
 *.txt
 *.json
 **/*.json
+*.txt
