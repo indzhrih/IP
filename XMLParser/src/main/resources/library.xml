@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="library.xsd">
+  <book availableCopies="0" id="1" totalCopies="5">
+    <title>Java Programming</title>
+    <author>James Gosling</author>
+    <year>2020</year>
+    <price>1000.0</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="1" id="2" totalCopies="4">
+    <title>Design Patterns</title>
+    <author>Erich Gamma</author>
+    <year>1994</year>
+    <price>39.99</price>
+    <category>computer-science</category>
+  </book>
+  <book availableCopies="5" id="3" totalCopies="6">
+    <title>Effective Java</title>
+    <author>Joshua Bloch</author>
+    <year>2018</year>
+    <price>55.0</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="1" id="4" totalCopies="3">
+    <title>Clean Code</title>
+    <author>Robert C. Martin</author>
+    <year>2008</year>
+    <price>45.5</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="3" id="5" totalCopies="3">
+    <title>Clean Architecture</title>
+    <author>Robert C. Martin</author>
+    <year>2017</year>
+    <price>47.9</price>
+    <category>software-engineering</category>
+  </book>
+  <book availableCopies="4" id="6" totalCopies="5">
+    <title>Refactoring</title>
+    <author>Martin Fowler</author>
+    <year>2019</year>
+    <price>52.0</price>
+    <category>software-engineering</category>
+  </book>
+  <book availableCopies="1" id="7" totalCopies="2">
+    <title>Patterns of Enterprise Application Architecture</title>
+    <author>Martin Fowler</author>
+    <year>2002</year>
+    <price>58.5</price>
+    <category>software-engineering</category>
+  </book>
+  <book availableCopies="4" id="8" totalCopies="4">
+    <title>Introduction to Algorithms</title>
+    <author>Thomas H. Cormen</author>
+    <year>2009</year>
+    <price>69.99</price>
+    <category>computer-science</category>
+  </book>
+  <book availableCopies="2" id="9" totalCopies="3">
+    <title>Artificial Intelligence: A Modern Approach</title>
+    <author>Stuart Russell</author>
+    <year>2021</year>
+    <price>79.95</price>
+    <category>ai</category>
+  </book>
+  <book availableCopies="4" id="10" totalCopies="4">
+    <title>The Pragmatic Programmer</title>
+    <author>Andrew Hunt</author>
+    <year>1999</year>
+    <price>42.0</price>
+    <category>software-engineering</category>
+  </book>
+  <book availableCopies="2" id="11" totalCopies="2">
+    <title>Head First Design Patterns</title>
+    <author>Eric Freeman</author>
+    <year>2004</year>
+    <price>39.5</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="5" id="12" totalCopies="5">
+    <title>Spring in Action</title>
+    <author>Craig Walls</author>
+    <year>2018</year>
+    <price>44.99</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="1" id="13" totalCopies="3">
+    <title>Domain-Driven Design</title>
+    <author>Eric Evans</author>
+    <year>2003</year>
+    <price>59.0</price>
+    <category>software-engineering</category>
+  </book>
+  <book availableCopies="3" id="14" totalCopies="4">
+    <title>Java Concurrency in Practice</title>
+    <author>Brian Goetz</author>
+    <year>2006</year>
+    <price>54.75</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="3" id="15" totalCopies="3">
+    <title>Effective Modern C++</title>
+    <author>Scott Meyers</author>
+    <year>2014</year>
+    <price>48.3</price>
+    <category>programming</category>
+  </book>
+  <book availableCopies="20" id="16" totalCopies="20">
+    <title>My book</title>
+    <author>Alexander Sakovich</author>
+    <year>2025</year>
+    <price>49.0</price>
+    <category>Engeneering</category>
+  </book>
+  <book availableCopies="18" id="17" totalCopies="20">
+    <title>TEST BOOK</title>
+    <author>TEST</author>
+    <year>2025</year>
+    <price>100.0</price>
+    <category>TEST</category>
+  </book>
+</library>
