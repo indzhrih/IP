@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотекарь – книги</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Библиотекарь: управление книгами</h2>
+
+    <div class="nav">
+        <a th:href="@{/librarian/books}">Книги</a>
+        <a th:href="@{/librarian/readers}">Читатели</a>
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <div th:if="${message}">
+        <p class="alert alert-success" th:text="${message}"></p>
+    </div>
+    <div th:if="${error}">
+        <p class="alert alert-error" th:text="${error}"></p>
+    </div>
+
+    <h3>Список книг</h3>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Год</th>
+                <th>Категория</th>
+                <th>Цена</th>
+                <th>Всего</th>
+                <th>В наличии</th>
+            </tr>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.year}"></td>
+                <td th:text="${book.category}"></td>
+                <td th:text="${book.price}"></td>
+                <td th:text="${book.totalCopies}"></td>
+                <td th:text="${book.availableCopies}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="grid-two-cols">
+        <div>
+            <h3>Добавление новой книги</h3>
+            <form th:action="@{/librarian/books/add}" method="post" class="form-card">
+                <label>Название:
+                    <input type="text" name="title">
+                </label>
+                <label>Автор:
+                    <input type="text" name="author">
+                </label>
+                <label>Год:
+                    <input type="number" name="year">
+                </label>
+                <label>Цена:
+                    <input type="number" step="0.01" name="price">
+                </label>
+                <label>Категория:
+                    <input type="text" name="category">
+                </label>
+                <label>Всего экземпляров:
+                    <input type="number" name="totalCopies">
+                </label>
+                <label>В наличии:
+                    <input type="number" name="availableCopies">
+                </label>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Переоценка книги</h3>
+            <form th:action="@{/librarian/books/reprice}" method="post" class="form-card">
+                <label>ID книги:
+                    <input type="number" name="bookId">
+                </label>
+                <label>Новая цена:
+                    <input type="number" step="0.01" name="newPrice">
+                </label>
+                <button type="submit">Изменить цену</button>
+            </form>
+
+            <h3>Выдача книги читателю</h3>
+            <form th:action="@{/librarian/books/issue}" method="post" class="form-card">
+                <label>ID книги:
+                    <input type="number" name="bookId">
+                </label>
+                <label>Читатель:
+                    <select name="readerUsername">
+                        <option th:each="reader : ${readers}"
+                                th:value="${reader.username}"
+                                th:text="${reader.username}"></option>
+                    </select>
+                </label>
+                <button type="submit">Выдать</button>
+            </form>
+
+            <h3>Валидация XML</h3>
+            <form th:action="@{/librarian/validate-xml}" method="post" class="form-card">
+                <button type="submit">Валидировать XML</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

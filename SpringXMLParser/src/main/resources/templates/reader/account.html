@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Читатель – мой аккаунт</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Мой аккаунт</h2>
+
+    <div class="nav">
+        <a th:href="@{/reader/books}">Книги</a>
+        <a th:href="@{/reader/account}">Мой аккаунт</a>
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <div th:if="${message}">
+        <p class="alert alert-success" th:text="${message}"></p>
+    </div>
+    <div th:if="${error}">
+        <p class="alert alert-error" th:text="${error}"></p>
+    </div>
+
+    <div th:if="${user}">
+        <p>Логин: <span th:text="${user.username}"></span></p>
+        <p>Роль: <span th:text="${user.role}"></span></p>
+
+        <h3>Выданные мне книги</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>ID книги</th>
+                    <th>Название</th>
+                    <th>Автор</th>
+                    <th>Дата выдачи</th>
+                    <th>Действие</th>
+                </tr>
+                <tr th:each="row : ${borrowedBooks}">
+                    <td th:text="${row.bookId}"></td>
+                    <td th:text="${row.book != null ? row.book.title : 'не найдено'}"></td>
+                    <td th:text="${row.book != null ? row.book.author : '-'}"></td>
+                    <td th:text="${row.issueDate}"></td>
+                    <td>
+                        <form th:action="@{/reader/account/return}" method="post">
+                            <input type="hidden" name="bookId" th:value="${row.bookId}">
+                            <button type="submit">Вернуть</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

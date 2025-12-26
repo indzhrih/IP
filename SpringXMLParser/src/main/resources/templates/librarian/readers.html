@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотекарь – читатели</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Библиотекарь: читатели</h2>
+
+    <div class="nav">
+        <a th:href="@{/librarian/books}">Книги</a>
+        <a th:href="@{/librarian/readers}">Читатели</a>
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <div th:if="${error}">
+        <p class="alert alert-error" th:text="${error}"></p>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>Логин</th>
+                <th>Роль</th>
+                <th>Выданные книги</th>
+            </tr>
+            <tr th:each="reader : ${readers}">
+                <td th:text="${reader.username}"></td>
+                <td th:text="${reader.role}"></td>
+                <td>
+                    <ul>
+                        <li th:each="borrowed : ${reader.borrowedBooks}"
+                            th:text="'Книга ID=' + ${borrowed.bookId} + ', дата: ' + ${borrowed.issueDate}"></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><a th:href="@{/librarian/books}">Назад к книгам</a></p>
+</div>
+</body>
+</html>

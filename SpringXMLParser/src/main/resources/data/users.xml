@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+  <user password="librarian" role="LIBRARIAN" username="librarian">
+    <borrowedBooks/>
+  </user>
+  <user password="reader1" role="READER" username="reader1">
+    <borrowedBooks>
+      <borrowedBook bookId="16" issueDate="2025-12-09"/>
+      <borrowedBook bookId="17" issueDate="2025-12-09"/>
+    </borrowedBooks>
+  </user>
+  <user password="qwertyY1" role="READER" username="log">
+    <borrowedBooks/>
+  </user>
+</users>
