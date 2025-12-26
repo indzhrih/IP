@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users>
+  <user password="librarian" role="LIBRARIAN" username="librarian">
+    <borrowedBooks/>
+  </user>
+  <user password="reader1" role="READER" username="reader1">
+    <borrowedBooks/>
+  </user>
+  <user password="qwertyY1" role="READER" username="log">
+    <borrowedBooks/>
+  </user>
+</users>

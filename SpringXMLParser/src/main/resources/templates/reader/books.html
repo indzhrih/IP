@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Читатель – книги</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Читатель: каталог книг</h2>
+
+    <div class="nav">
+        <a th:href="@{/reader/books}">Книги</a>
+        <a th:href="@{/reader/account}">Мой аккаунт</a>
+        <a th:href="@{/logout}">Выйти</a>
+    </div>
+
+    <div th:if="${error}">
+        <p class="alert alert-error" th:text="${error}"></p>
+    </div>
+
+    <h3>Поиск</h3>
+    <form th:action="@{/reader/books}" method="get" class="form-card">
+        <label>Автор:
+            <input type="text" name="author" th:value="${author}">
+        </label>
+        <label>Год:
+            <input type="number" name="year" th:value="${year}">
+        </label>
+        <label>Категория:
+            <input type="text" name="category" th:value="${category}">
+        </label>
+        <div class="form-actions">
+            <button type="submit">Искать</button>
+            <a class="button-link" th:href="@{/reader/books}">Сбросить</a>
+        </div>
+    </form>
+
+    <h3>Список книг</h3>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Год</th>
+                <th>Категория</th>
+                <th>Цена</th>
+                <th>Всего</th>
+                <th>В наличии</th>
+            </tr>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.year}"></td>
+                <td th:text="${book.category}"></td>
+                <td th:text="${book.price}"></td>
+                <td th:text="${book.totalCopies}"></td>
+                <td th:text="${book.availableCopies}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
